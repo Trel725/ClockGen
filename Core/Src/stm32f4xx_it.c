@@ -171,7 +171,6 @@ void DebugMon_Handler(void)
 void PendSV_Handler(void)
 {
   /* USER CODE BEGIN PendSV_IRQn 0 */
-
   /* USER CODE END PendSV_IRQn 0 */
   /* USER CODE BEGIN PendSV_IRQn 1 */
 
@@ -184,7 +183,6 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-
   /* USER CODE END SysTick_IRQn 0 */
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
@@ -217,11 +215,13 @@ void USART2_IRQHandler(void)
 		case START_OF_PROGRAM_BYTE:
 			fsm_state = PROGRAM_RECEIVING;
 			break;
+		case START_EXEC_BYTE:
+			if (fsm_state == WAITING_FOR_START){
+				start_execution();
+				fsm_state = PROGRAM_EXECUTING;
+			}
 		}
 
-		if (uartrecbuffer[uartrecbufftop] == END_RECEIVE_CHAR) {
-			uart_receive_end = 1;
-		}
 		uartrecbufftop++;
 		if (uartrecbufftop == UART_RECEIVE_BUF_SIZE) {
 			uartrecbufftop = 0;
@@ -242,10 +242,7 @@ void TIM6_DAC_IRQHandler(void)
 	//reset bit
 	TICK_TIMER->SR &= ~TIM_SR_UIF;
 	current_us++;
-	TEST_GPIO_GPIO_Port->ODR ^= TEST_GPIO_Pin;
-	for (int i = 0; i < 20; i++) {
-		TEST_GPIO_GPIO_Port->ODR ^= GPIO_PIN_8;
-	}
+	exec_irq_handler();
   /* USER CODE END TIM6_DAC_IRQn 0 */
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
 

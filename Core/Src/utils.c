@@ -6,110 +6,30 @@
  */
 
 #include "main.h"
-#include "utils.h"
 #include <stdio.h>
 #include <stdarg.h>
 
-/*
- * @brief performs program receiving from host
- * initialized by getting START_OF_PROGRAM_BYTE
- * end by receiving END_OF_PROGRAM_BYTE
- * @ret 0 is success, negative if error
+/**
+ * @brief converts 4 bytes to int
  */
-int receive_program_endbyte(void) {
-	uint_fast8_t curr_byte;
-	//disable interrupt handler
-	uart_interrupt_toggle(0);
-	// set receive buffer to 0
-	uartrecbufftop = 0;
-	// initialzie counter so that we wont get stuck into infinite loop
-	int counter = 0;
-	do {
-		counter++;
-		if ( USART2->SR & USART_SR_RXNE) {
-			// save the data to the buffer
-			curr_byte = (USART2->DR & USART_DR_DR);
-			uartrecbuffer[uartrecbufftop] = curr_byte;
-			uartrecbufftop++;
-			// if host tries to send more than we can handle
-			if (uartrecbufftop == UART_RECEIVE_BUF_SIZE) {
-				uart_printf(
-						"Receiving buffer overflow, program is too big!\r\n");
-				uart_interrupt_toggle(1);
-				return -1;
-			}
-		}
-		// if receiving is too long probably we missed end of program byte somewhere
-		if (counter >= MAX_RECEIVE_CYCLES) {
-			uart_printf("Can't find end of program, rejecting...!\r\n");
-			uart_interrupt_toggle(1);
-			return -1;
-		}
-	} while (curr_byte != END_OF_PROGRAMM_BYTE);
-	// at uartrecbuffer[uartrecbufftop - 1] lies END_OF_PROGRAMM_BYTE
-	uint32_t received_crc = uartrecbuffer[uartrecbufftop - 5] + (uartrecbuffer[uartrecbufftop - 4] << 8) + (uartrecbuffer[uartrecbufftop - 3] << 16) + (uartrecbuffer[uartrecbufftop - 2] << 24);
-	uint32_t crc = crc32_bytes(uartrecbuffer, uartrecbufftop - 5);
-	if (received_crc != crc){
-		uart_printf("Control sum mismatch!\r\n");
-		uart_interrupt_toggle(1);
-		return -1;
-
-	}
-
-	uart_interrupt_toggle(1);
-	return 0;
+inline uint32_t bytes_to_int(uint8_t * bytes){
+	return bytes[0] + (bytes[1] << 8) + (bytes[2] << 16) + (bytes[3] << 24);
 }
 
-
-/*
- * @brief performs program receiving from host
- * initialized by getting START_OF_PROGRAM_BYTE
- * end when flow have stopped (when counter, reset after each received byte gets > MAX_RECEIVE_CYCLES)
- * @ret 0 is success, negative if error
+/**
+ * @brief enables/disables TICK_TIMER interrupts
  */
-int receive_program(void) {
-	uint_fast8_t curr_byte;
-	//disable interrupt handler
-	uart_interrupt_toggle(0);
-	// set receive buffer to 0
-	uartrecbufftop = 0;
-	// initialzie counter so that we wont get stuck into infinite loop
-	int counter = 0;
-	do {
-		counter++;
-		if ( USART2->SR & USART_SR_RXNE) {
-			// save the data to the buffer
-			curr_byte = (USART2->DR & USART_DR_DR);
-			uartrecbuffer[uartrecbufftop] = curr_byte;
-			uartrecbufftop++;
-			// if host tries to send more than we can handle
-			if (uartrecbufftop >= UART_RECEIVE_BUF_SIZE) {
-				uart_printf(
-						"Receiving buffer overflow, program is too big!\r\n");
-				uartrecbufftop = 0;
-				uart_interrupt_toggle(1);
-				return -1;
-			}
-			counter = 0;
-		}
-	} while (counter < MAX_RECEIVE_CYCLES);
-	// if something went wrong and we did not receive enough bytes,
-	// exit earlier to prevent memory smashing+
-	if(uartrecbufftop < 5){
-		goto EXIT_W_ERROR;
+void tick_timer_toggle(int flag){
+	if(flag){
+		//enable tick timer, enable its interrupt
+		TICK_TIMER->CR1 |= TIM_CR1_CEN;
+		TICK_TIMER->DIER |= TIM_DIER_UIE;
+		return;
 	}
-	uint32_t received_crc = uartrecbuffer[uartrecbufftop - 5] + (uartrecbuffer[uartrecbufftop - 4] << 8) + (uartrecbuffer[uartrecbufftop - 3] << 16) + (uartrecbuffer[uartrecbufftop - 2] << 24);
-	uint32_t crc = crc32_bytes(uartrecbuffer, uartrecbufftop - 5);
-	if (received_crc != crc){
-	    EXIT_W_ERROR:
-		uart_printf("Control sum mismatch!\r\n");
-		uart_interrupt_toggle(1);
-		return -1;
-
-	}
-
-	uart_interrupt_toggle(1);
-	return 0;
+	//disable timer, interrupts, reset it
+	TICK_TIMER->CR1 &= ~TIM_CR1_CEN;
+	TICK_TIMER->DIER  &= ~ TIM_DIER_UIE;
+	TICK_TIMER->CNT = 0;
 }
 
 /**
@@ -117,10 +37,10 @@ int receive_program(void) {
  */
 void uart_interrupt_toggle(int flag) {
 	if (flag) {
-		huart2.Instance->CR1 |= USART_CR1_RXNEIE;
+		UART_MAIN_HANDLE.Instance->CR1 |= USART_CR1_RXNEIE;
 		return;
 	}
-	huart2.Instance->CR1 &= ~USART_CR1_RXNEIE;
+	UART_MAIN_HANDLE.Instance->CR1 &= ~USART_CR1_RXNEIE;
 }
 
 /**

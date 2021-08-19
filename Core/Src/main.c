@@ -58,10 +58,6 @@ TIM_HandleTypeDef htim14;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
-// state flags
-int_fast8_t uart_receive_end = 0;
-enum FSM_STATE fsm_state = IDLE;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,6 +95,7 @@ int main(void)
 	uartrecbufftop = 0;
 	progbuftop = 0;
 	current_us = 0;
+	enum FSM_STATE fsm_state = IDLE;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -136,37 +133,16 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
+    //enable UART interrupt
 	uart_interrupt_toggle(1);
-	htim6.Instance->CR1 |= TIM_CR1_CEN;
-	htim6.Instance->DIER |= TIM_DIER_UIE;
-
+	//disable systick to guarantee execution timings
+	SysTick->CTRL = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-		if (uart_receive_end) {
-			uart_printf("Hi there, received UART string\r\n");
-			uart_receive_end = 0;
-			uartrecbufftop = 0;
-		}
-		switch (fsm_state) {
-		case IDLE:
-			break;
-		case PROGRAM_RECEIVING:
-			ret = receive_program();
-			if (ret < 0) {
-				uart_printf("Error receiving programm\r\n");
-				fsm_state = IDLE;
-				break;
-			}
-			uart_printf("Programm successfully received!\r\n");
-			fsm_state = WAITING_FOR_START;
-			break;
-		case WAITING_FOR_START:
-			break;
-		}
-
+		fsm();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -227,6 +203,9 @@ static void MX_NVIC_Init(void)
   /* USART2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(USART2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(USART2_IRQn);
+  /* TIM6_DAC_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
 }
 
 /**
@@ -920,7 +899,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 1000000;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;

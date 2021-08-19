@@ -11,10 +11,11 @@
 enum FSM_STATE{
 	IDLE,
 	PROGRAM_RECEIVING,
-	PROGRAM_PARSING,
 	WAITING_FOR_START,
 	PROGRAM_EXECUTING
 };
+
+void fsm(void);
 
 
 #endif /* INC_FSM_H_ */
