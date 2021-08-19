@@ -1,0 +1,6 @@
+utils.c:19:5:receive_program_endbyte	24	static
+utils.c:70:5:receive_program	24	static
+utils.c:118:6:uart_interrupt_toggle	16	static
+utils.c:130:6:uart_printf	16	static
+utils.c:145:10:crc32_bytes	32	static
+utils.c:178:10:revbit	24	static
