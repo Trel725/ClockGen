@@ -24,7 +24,19 @@ class Register(object):
         for field in desc['fields']:
             setattr(self, field, desc['fields'][field])
 
-        self.value = self.reset_value
+        self._value = self.reset_value
+        self._prev_value = self.reset_value
+
+    @property
+    def value(self):
+        return self._value
+
+    @value.setter
+    def value(self, val):
+        if val > (2**self.size) - 1:
+            raise ValueError(
+                f"Cant set val {val} to register having {self.size} bits")
+        self._value = val
 
     def __repr__(self):
         tmp = dict(self.desc)
@@ -84,9 +96,19 @@ class Periph(object):
             regs[regname] = reg
         self.registers = regs
 
-    def get_modified_regs(self):
-        return [reg for reg in self.registers.values()
-                if reg.value != reg.reset_value]
+    def get_modified_regs(self, update=True):
+        '''returns list of changed registers from reset (if update=False)
+            or from previous call (if update=True)
+          registers with prev_value == -1 are always updated,
+          which is useful for dynamic registers (e.g. cnter)
+        '''
+        regs = [reg for reg in self.registers.values()
+                if reg.value != reg._prev_value]
+        if update:
+            for r in regs:
+                if r._prev_value >= 0:
+                    r._prev_value = r.value
+        return regs
 
 
 class Timer(Periph):
@@ -94,7 +116,101 @@ class Timer(Periph):
 
     def __init__(self, *args, **kwargs):
         super(Timer, self).__init__(*args, **kwargs)
+        # do not update prev_value for CNT,
+        # instead set it each time its requested
+        self.CNT._prev_value = -1
+        self.CCMR1_Output._prev_value = -1
+        self.CCMR2_Output._prev_value = -1
 
-    def toggle_channel(self, channel):
-        assert channel in [1, 2, 3, 4], "Bad channel! must be from 1 to 4"
-        self.CCER.set_field(self.CCER.fields[f'CC{channel}E'])
+    def toggle_channel(self, channel, value):
+        """
+        must set TIM->CCER->CC1E to enable first channel, and so on
+        """
+        try:
+            self.CCER.set_field(self.CCER.fields[f'CC{channel}E'], value)
+        except KeyError:
+            print(f"Timer does not have this channel: {channel}")
+
+    def toggle_polarity(self, channel, value):
+        '''
+        bit TIM->CCER->CC1P controls polarity of first channel
+        value 0 -> active high
+        value 1 -> active low'''
+        try:
+            self.CCER.set_field(self.CCER.fields[f'CC{channel}P'], value)
+        except KeyError:
+            raise ValueError(f"Timer does not have this channel: {channel}")
+
+    def set_autoreload(self, value):
+        '''
+        value at which counter will
+        automaticlly reload and generate GPIO toggle
+        TIM->ARR'''
+        self.ARR.value = value
+
+    def set_counter(self, value):
+        # TIM->CNT - current value of a counter
+        self.CNT.value = value
+
+    def start(self):
+        # need to set TIM->CR1->CEN to enable counter
+        self.CR1.set_field(self.CR1.CEN, 1)
+
+    def stop(self):
+        # need to reset TIM->CR1->CEN to disable counter
+        self.CR1.set_field(self.CR1.CEN, 0)
+
+
+class GPIO(Periph):
+    """docstring for GPIO"""
+
+    def __init__(self, *args, **kwargs):
+        super(Timer, self).__init__(*args, **kwargs)
+
+
+class ProgramGen(object):
+    """docstring for ProgramGen"""
+
+    def __init__(self):
+        super(ProgramGen, self).__init__()
+        self.frames = []
+
+        # end of frame
+        self.eof = 0xABBCCDDE
+        # end of programm
+        self.eop = 0xFFFFFFFF
+
+    @staticmethod
+    def _flatten_cmds(cmds):
+        return [elem for iterable in cmds for elem in iterable[1:]]
+
+    @staticmethod
+    def _binarize(vals):
+        data_bin = b"".join([item.to_bytes(4, byteorder="little")
+                             for item in vals])
+        return data_bin
+
+    def print_program(self):
+        for frame in self.frames:
+            print(f"@ {frame['time']}")
+            for name, addr, val in frame['cmds']:
+                print(f"    {name:<15}:{hex(addr)}:{hex(val)}")
+
+    def add_frame(self, hws, time):
+        cmds = []
+        for hw in hws:
+            regs = hw.get_modified_regs()
+            cmds.extend([(f"{hw.name}->{r.name}", r.address, r.value)
+                         for r in regs])
+
+        self.frames.append(dict(time=time,
+                                cmds=cmds))
+
+    def generate_program(self):
+        prg = []
+        for frame in self.frames:
+            prg.append(frame['time'])
+            prg.extend(self._flatten_cmds(frame['cmds']))
+            prg.append(self.eof)
+        prg.append(self.eop)
+        return self._binarize(prg)
