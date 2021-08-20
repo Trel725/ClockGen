@@ -57,7 +57,7 @@ ARR = hw_desc['TIM2']['ARR']['address']
 presc = presc
 
 CNT = hw_desc['TIM2']['CNT']['address']
-cnt_val = 1
+cnt_val = 0
 
 CR1 = hw_desc['TIM2']['CR1']['address']
 CEN = 1
@@ -67,7 +67,7 @@ frames = [(100, CCER, CC3E, ARR, presc, CNT, cnt_val, CR1, CEN, eoc)]
 high = (1 << 4)
 low = 0
 
-times = [300 + i * 100 for i in range(4000)]
+times = [350 + i * 100 for i in range(4000)]
 addrs = [ODR] * 4000
 vals = [high, low] * 2000
 
