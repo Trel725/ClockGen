@@ -1,0 +1,13 @@
+TIM_FREQ = 80_000_000
+TIM_INIT_DELAY = 10
+MASTER_TIMER = "TIM1"
+# end of frame
+EOF = 0xABBCCDDE
+# end of programm
+EOP = 0xFFFFFFFF
+# serial bytes
+SERIAL_START = b'\x11'
+SERIAL_END = b'\xa0'
+SERIAL_EXECUTE = b'\xc6'
+
+GPIO_LIST = ['GPIOA', 'GPIOB', "GPIOC", "GPIOD"]
