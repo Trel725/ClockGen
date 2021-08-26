@@ -76,6 +76,9 @@ class TIM(BaseInterface):
         self.add_frame(time)
 
     def on_sync(self, freq, time):
+        if self.timer.name == master_timer.name:
+            raise ValueError(
+                "Don't use on_sync on master timer! Simple on() will turn all the timers synchroneously!")
         self._val_sync()
         self.synced = True
         self._val_time(time)
