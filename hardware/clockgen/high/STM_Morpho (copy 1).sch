@@ -1,0 +1,1347 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x19_Odd_Even CN7
+U 1 1 5F9F2DD0
+P 1300 2150
+F 0 "CN7" H 1350 3267 50  0000 C CNN
+F 1 "Conn_02x19_Odd_Even" H 1350 3176 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical" H 1300 2150 50  0001 C CNN
+F 3 "~" H 1300 2150 50  0001 C CNN
+	1    1300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x19_Odd_Even CN10
+U 1 1 5F9F448E
+P 2450 2150
+F 0 "CN10" H 2500 3267 50  0000 C CNN
+F 1 "Conn_02x19_Odd_Even" H 2500 3176 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical" H 2450 2150 50  0001 C CNN
+F 3 "~" H 2450 2150 50  0001 C CNN
+	1    2450 2150
+	1    0    0    -1  
+$EndComp
+Text Label 1100 1250 2    50   ~ 0
+PC10
+Text Label 1100 1350 2    50   ~ 0
+PC12
+Text Label 1100 1450 2    50   ~ 0
+VDD
+Text Label 1100 1550 2    50   ~ 0
+BOOT0
+Text Label 1100 1650 2    50   ~ 0
+NC
+Text Label 1100 1750 2    50   ~ 0
+NC
+Text Label 1100 1850 2    50   ~ 0
+PA13
+Text Label 1100 1950 2    50   ~ 0
+PA14
+Text Label 1100 2050 2    50   ~ 0
+PA15
+Text Label 1100 2150 2    50   ~ 0
+GND
+Text Label 1100 2250 2    50   ~ 0
+PB7
+Text Label 1100 2350 2    50   ~ 0
+PC13
+Text Label 1100 2450 2    50   ~ 0
+PC14
+Text Label 1100 2550 2    50   ~ 0
+PC15
+Text Label 1100 2650 2    50   ~ 0
+PH0
+Text Label 1100 2750 2    50   ~ 0
+PH1
+Text Label 1100 2850 2    50   ~ 0
+VBAT
+Text Label 1100 2950 2    50   ~ 0
+PC2
+Text Label 1100 3050 2    50   ~ 0
+PC3
+Text Label 1600 1250 0    50   ~ 0
+PC11
+Text Label 1600 1350 0    50   ~ 0
+PD2
+Text Label 1600 1450 0    50   ~ 0
+E5V
+Text Label 1600 1550 0    50   ~ 0
+GND
+Text Label 1600 1650 0    50   ~ 0
+NC
+Text Label 1600 1750 0    50   ~ 0
+IOREF
+Text Label 1600 1850 0    50   ~ 0
+RESET
+Text Label 1600 1950 0    50   ~ 0
++3V3
+Text Label 1600 2050 0    50   ~ 0
++5V
+Text Label 1600 2150 0    50   ~ 0
+GND
+Text Label 1600 2250 0    50   ~ 0
+GND
+Text Label 1600 2350 0    50   ~ 0
+VIN
+Text Label 1600 2450 0    50   ~ 0
+NC
+Text Label 1600 2550 0    50   ~ 0
+PA0
+Text Label 1600 2650 0    50   ~ 0
+PA1
+Text Label 1600 2750 0    50   ~ 0
+PA4
+Text Label 1600 2850 0    50   ~ 0
+PB0
+Text Label 1600 2950 0    50   ~ 0
+PC1
+Text Label 1600 3050 0    50   ~ 0
+PC0
+Text Label 2750 1250 0    50   ~ 0
+PC8
+Text Label 2750 1350 0    50   ~ 0
+PC6
+Text Label 2750 1450 0    50   ~ 0
+PC5
+Text Label 2750 1550 0    50   ~ 0
+U5V
+Text Label 2750 1650 0    50   ~ 0
+NC
+Text Label 2750 1750 0    50   ~ 0
+PA12
+Text Label 2750 1850 0    50   ~ 0
+PA11
+Text Label 2750 1950 0    50   ~ 0
+PB12
+Text Label 2750 2050 0    50   ~ 0
+NC
+Text Label 2750 2150 0    50   ~ 0
+GND
+Text Label 2750 2250 0    50   ~ 0
+PB2
+Text Label 2750 2350 0    50   ~ 0
+PB1
+Text Label 2750 2450 0    50   ~ 0
+PB15
+Text Label 2750 2550 0    50   ~ 0
+PB14
+Text Label 2750 2650 0    50   ~ 0
+PB13
+Text Label 2750 2750 0    50   ~ 0
+AGND
+Text Label 2750 2850 0    50   ~ 0
+PC4
+Text Label 2750 2950 0    50   ~ 0
+NC
+Text Label 2750 3050 0    50   ~ 0
+NC
+Text Label 2250 1250 2    50   ~ 0
+PC9
+Text Label 2250 1350 2    50   ~ 0
+PB8
+Text Label 2250 1450 2    50   ~ 0
+PB9
+Text Label 2250 1550 2    50   ~ 0
+AVDD
+Text Label 2250 1650 2    50   ~ 0
+GND
+Text Label 2250 1750 2    50   ~ 0
+PA5
+Text Label 2250 1850 2    50   ~ 0
+PA6
+Text Label 2250 1950 2    50   ~ 0
+PA7
+Text Label 2250 2050 2    50   ~ 0
+PB6
+Text Label 2250 2150 2    50   ~ 0
+PC7
+Text Label 2250 2250 2    50   ~ 0
+PA9
+Text Label 2250 2350 2    50   ~ 0
+PA8
+Text Label 2250 2450 2    50   ~ 0
+PB10
+Text Label 2250 2550 2    50   ~ 0
+PB4
+Text Label 2250 2650 2    50   ~ 0
+PB5
+Text Label 2250 2750 2    50   ~ 0
+PB3
+Text Label 2250 2850 2    50   ~ 0
+PA10
+Text Label 2250 2950 2    50   ~ 0
+PA2
+Text Label 2250 3050 2    50   ~ 0
+PA3
+$Comp
+L 2021-08-26_08-32-07:74ALVC164245DLG4 U1
+U 1 1 6128B1C2
+P 4400 1050
+F 0 "U1" H 5600 1437 60  0000 C CNN
+F 1 "74ALVC164245DLG4" H 5600 1331 60  0000 C CNN
+F 2 "footprints:74ALVC164245DLG4" H 5600 1290 60  0001 C CNN
+F 3 "" H 4400 1050 60  0000 C CNN
+	1    4400 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J1
+U 1 1 612A6358
+P 13000 1300
+F 0 "J1" H 13080 1292 50  0000 L CNN
+F 1 "Conn_01x10" H 13080 1201 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-10-2.54_1x10_P2.54mm_Horizontal" H 13000 1300 50  0001 C CNN
+F 3 "~" H 13000 1300 50  0001 C CNN
+	1    13000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J2
+U 1 1 612ACF52
+P 13000 2500
+F 0 "J2" H 13080 2492 50  0000 L CNN
+F 1 "Conn_01x10" H 13080 2401 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-10-2.54_1x10_P2.54mm_Horizontal" H 13000 2500 50  0001 C CNN
+F 3 "~" H 13000 2500 50  0001 C CNN
+	1    13000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J3
+U 1 1 612AD537
+P 13000 3700
+F 0 "J3" H 13080 3692 50  0000 L CNN
+F 1 "Conn_01x10" H 13080 3601 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-10-2.54_1x10_P2.54mm_Horizontal" H 13000 3700 50  0001 C CNN
+F 3 "~" H 13000 3700 50  0001 C CNN
+	1    13000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J4
+U 1 1 612ADCA2
+P 13000 4900
+F 0 "J4" H 13080 4892 50  0000 L CNN
+F 1 "Conn_01x10" H 13080 4801 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-10-2.54_1x10_P2.54mm_Horizontal" H 13000 4900 50  0001 C CNN
+F 3 "~" H 13000 4900 50  0001 C CNN
+	1    13000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J5
+U 1 1 612AED07
+P 14500 1100
+F 0 "J5" H 14580 1092 50  0000 L CNN
+F 1 "Conn_01x10" H 14580 1001 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-10-2.54_1x10_P2.54mm_Horizontal" H 14500 1100 50  0001 C CNN
+F 3 "~" H 14500 1100 50  0001 C CNN
+	1    14500 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14300 700  14300 800 
+Connection ~ 14300 800 
+Wire Wire Line
+	14300 800  14300 900 
+Connection ~ 14300 900 
+Wire Wire Line
+	14300 900  14300 1000
+Connection ~ 14300 1000
+Wire Wire Line
+	14300 1000 14300 1100
+Connection ~ 14300 1100
+Wire Wire Line
+	14300 1100 14300 1200
+Connection ~ 14300 1200
+Wire Wire Line
+	14300 1200 14300 1300
+Connection ~ 14300 1300
+Wire Wire Line
+	14300 1300 14300 1400
+Connection ~ 14300 1400
+Wire Wire Line
+	14300 1400 14300 1500
+Connection ~ 14300 1500
+Wire Wire Line
+	14300 1500 14300 1600
+Connection ~ 14300 1600
+Wire Wire Line
+	14300 1600 14300 1750
+$Comp
+L power:GND #PWR01
+U 1 1 612B08C8
+P 14300 1750
+F 0 "#PWR01" H 14300 1500 50  0001 C CNN
+F 1 "GND" H 14305 1577 50  0000 C CNN
+F 2 "" H 14300 1750 50  0001 C CNN
+F 3 "" H 14300 1750 50  0001 C CNN
+	1    14300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x10 J6
+U 1 1 612B596D
+P 15300 1100
+F 0 "J6" H 15380 1092 50  0000 L CNN
+F 1 "Conn_01x10" H 15380 1001 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-10-2.54_1x10_P2.54mm_Horizontal" H 15300 1100 50  0001 C CNN
+F 3 "~" H 15300 1100 50  0001 C CNN
+	1    15300 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15100 700  15100 800 
+Connection ~ 15100 800 
+Wire Wire Line
+	15100 800  15100 900 
+Connection ~ 15100 900 
+Wire Wire Line
+	15100 900  15100 1000
+Connection ~ 15100 1000
+Wire Wire Line
+	15100 1000 15100 1100
+Connection ~ 15100 1100
+Wire Wire Line
+	15100 1100 15100 1200
+Connection ~ 15100 1200
+Wire Wire Line
+	15100 1200 15100 1300
+Connection ~ 15100 1300
+Wire Wire Line
+	15100 1300 15100 1400
+Connection ~ 15100 1400
+Wire Wire Line
+	15100 1400 15100 1500
+Connection ~ 15100 1500
+Wire Wire Line
+	15100 1500 15100 1600
+Connection ~ 15100 1600
+Wire Wire Line
+	15100 1600 15100 1750
+$Comp
+L power:GND #PWR04
+U 1 1 612B5986
+P 15100 1750
+F 0 "#PWR04" H 15100 1500 50  0001 C CNN
+F 1 "GND" H 15105 1577 50  0000 C CNN
+F 2 "" H 15100 1750 50  0001 C CNN
+F 3 "" H 15100 1750 50  0001 C CNN
+	1    15100 1750
+	1    0    0    -1  
+$EndComp
+Text Label 4400 1350 2    50   ~ 0
+GND
+Text Label 4400 1950 2    50   ~ 0
+GND
+Text Label 4400 2450 2    50   ~ 0
+GND
+Text Label 4400 3050 2    50   ~ 0
+GND
+Text Label 6800 1350 0    50   ~ 0
+GND
+Text Label 6800 1950 0    50   ~ 0
+GND
+Text Label 6800 2450 0    50   ~ 0
+GND
+Text Label 6800 3050 0    50   ~ 0
+GND
+Text Label 4400 1650 2    50   ~ 0
++5V
+Text Label 4400 2750 2    50   ~ 0
++5V
+Text Label 6800 1650 0    50   ~ 0
++3V3
+Text Label 6800 2750 0    50   ~ 0
++3V3
+$Comp
+L Device:R R1
+U 1 1 612C604E
+P 14400 2700
+F 0 "R1" H 14470 2746 50  0000 L CNN
+F 1 "10K" H 14470 2655 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 14330 2700 50  0001 C CNN
+F 3 "~" H 14400 2700 50  0001 C CNN
+	1    14400 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR02
+U 1 1 612C8ACE
+P 14400 2550
+F 0 "#PWR02" H 14400 2400 50  0001 C CNN
+F 1 "+3V3" H 14415 2723 50  0000 C CNN
+F 2 "" H 14400 2550 50  0001 C CNN
+F 3 "" H 14400 2550 50  0001 C CNN
+	1    14400 2550
+	1    0    0    -1  
+$EndComp
+Text Label 14400 2850 2    50   ~ 0
+PULLUP
+$Comp
+L Device:R R2
+U 1 1 612CD3A1
+P 14800 2550
+F 0 "R2" H 14870 2596 50  0000 L CNN
+F 1 "10K" H 14870 2505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 14730 2550 50  0001 C CNN
+F 3 "~" H 14800 2550 50  0001 C CNN
+	1    14800 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 612CDE89
+P 14800 2700
+F 0 "#PWR03" H 14800 2450 50  0001 C CNN
+F 1 "GND" H 14805 2527 50  0000 C CNN
+F 2 "" H 14800 2700 50  0001 C CNN
+F 3 "" H 14800 2700 50  0001 C CNN
+	1    14800 2700
+	1    0    0    -1  
+$EndComp
+Text Label 14800 2400 0    50   ~ 0
+PULLDOWN
+Text Label 6800 1050 0    50   ~ 0
+PULLDOWN
+Text Label 6800 3350 0    50   ~ 0
+PULLDOWN
+Wire Notes Line
+	3300 800  3300 3600
+Wire Notes Line
+	3300 3600 650  3600
+Wire Notes Line
+	650  3600 650  800 
+Wire Notes Line
+	650  800  3300 800 
+Text Notes 1350 3400 0    98   ~ 0
+Morpho connector
+Text Label 4400 1050 2    50   ~ 0
+PULLUP
+Text Label 4400 3350 2    50   ~ 0
+PULLUP
+$Comp
+L 2021-08-26_08-32-07:74ALVC164245DLG4 U2
+U 1 1 6130056B
+P 8750 1050
+F 0 "U2" H 9950 1437 60  0000 C CNN
+F 1 "74ALVC164245DLG4" H 9950 1331 60  0000 C CNN
+F 2 "footprints:74ALVC164245DLG4" H 9950 1290 60  0001 C CNN
+F 3 "" H 8750 1050 60  0000 C CNN
+	1    8750 1050
+	1    0    0    -1  
+$EndComp
+Text Label 8750 1350 2    50   ~ 0
+GND
+Text Label 8750 1950 2    50   ~ 0
+GND
+Text Label 8750 2450 2    50   ~ 0
+GND
+Text Label 8750 3050 2    50   ~ 0
+GND
+Text Label 11150 1350 0    50   ~ 0
+GND
+Text Label 11150 1950 0    50   ~ 0
+GND
+Text Label 11150 2450 0    50   ~ 0
+GND
+Text Label 11150 3050 0    50   ~ 0
+GND
+Text Label 8750 1650 2    50   ~ 0
++5V
+Text Label 8750 2750 2    50   ~ 0
++5V
+Text Label 11150 1650 0    50   ~ 0
++3V3
+Text Label 11150 2750 0    50   ~ 0
++3V3
+Text Label 11150 1050 0    50   ~ 0
+PULLDOWN
+Text Label 11150 3350 0    50   ~ 0
+PULLDOWN
+Text Label 8750 1050 2    50   ~ 0
+PULLUP
+Text Label 8750 3350 2    50   ~ 0
+PULLUP
+Text Label 6800 1150 0    50   ~ 0
+PA10
+Text Label 6800 1250 0    50   ~ 0
+PB10
+Text Label 6800 1450 0    50   ~ 0
+PB5
+Text Label 6800 1550 0    50   ~ 0
+PB6
+Text Label 6800 1750 0    50   ~ 0
+PA0
+Text Label 6800 1850 0    50   ~ 0
+PC7
+Text Label 6800 2050 0    50   ~ 0
+PB8
+Text Label 6800 2150 0    50   ~ 0
+PB9
+Text Label 6800 2250 0    50   ~ 0
+PA6
+Text Label 6800 2350 0    50   ~ 0
+PA7
+Text Label 4400 1150 2    50   ~ 0
+PA10_5V
+Text Label 4400 1250 2    50   ~ 0
+PB10_5V
+Text Label 4400 1450 2    50   ~ 0
+PB5_5V
+Text Label 4400 1550 2    50   ~ 0
+PB6_5V
+Text Label 4400 1750 2    50   ~ 0
+PA0_5V
+Text Label 4400 1850 2    50   ~ 0
+PC7_5V
+Text Label 4400 2050 2    50   ~ 0
+PB8_5V
+Text Label 4400 2150 2    50   ~ 0
+PB9_5V
+Text Label 4400 2250 2    50   ~ 0
+PA6_5V
+Text Label 4400 2350 2    50   ~ 0
+PA7_5V
+Text Label 12800 900  2    50   ~ 0
+PB10_5V
+Text Label 12800 1000 2    50   ~ 0
+PB10_5V
+Text Label 12800 1100 2    50   ~ 0
+PB5_5V
+Text Label 12800 1200 2    50   ~ 0
+PB5_5V
+Text Label 12800 1300 2    50   ~ 0
+PA0_5V
+Text Label 12800 1400 2    50   ~ 0
+PC7_5V
+Text Label 12800 1500 2    50   ~ 0
+PB8_5V
+Text Label 12800 1600 2    50   ~ 0
+PB9_5V
+Text Label 12800 1700 2    50   ~ 0
+PA6_5V
+Text Label 12800 1800 2    50   ~ 0
+PA7_5V
+Text Label 6800 2550 0    50   ~ 0
+PA1
+Text Label 6800 2650 0    50   ~ 0
+PA2
+Text Label 6800 2850 0    50   ~ 0
+PA3
+Text Label 6800 2950 0    50   ~ 0
+PA4
+Text Label 6800 3150 0    50   ~ 0
+PA5
+Text Label 6800 3250 0    50   ~ 0
+PA8
+Text Label 4400 2550 2    50   ~ 0
+PA1_5V
+Text Label 4400 2650 2    50   ~ 0
+PA2_5V
+Text Label 4400 2850 2    50   ~ 0
+PA3_5V
+Text Label 4400 2950 2    50   ~ 0
+PA4_5V
+Text Label 4400 3150 2    50   ~ 0
+PA5_5V
+Text Label 4400 3250 2    50   ~ 0
+PA8_5V
+$Comp
+L Device:CP C?
+U 1 1 61368E61
+P 14400 3450
+F 0 "C?" H 14518 3496 50  0000 L CNN
+F 1 "CP" H 14518 3405 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 14438 3300 50  0001 C CNN
+F 3 "~" H 14400 3450 50  0001 C CNN
+	1    14400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 6136A919
+P 14400 4250
+F 0 "C?" H 14518 4296 50  0000 L CNN
+F 1 "CP" H 14518 4205 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 14438 4100 50  0001 C CNN
+F 3 "~" H 14400 4250 50  0001 C CNN
+	1    14400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 6137C9E3
+P 14400 3600
+F 0 "#PWR06" H 14400 3350 50  0001 C CNN
+F 1 "GND" H 14405 3427 50  0000 C CNN
+F 2 "" H 14400 3600 50  0001 C CNN
+F 3 "" H 14400 3600 50  0001 C CNN
+	1    14400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 6137D289
+P 14400 4400
+F 0 "#PWR08" H 14400 4150 50  0001 C CNN
+F 1 "GND" H 14405 4227 50  0000 C CNN
+F 2 "" H 14400 4400 50  0001 C CNN
+F 3 "" H 14400 4400 50  0001 C CNN
+	1    14400 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3.3?
+U 1 1 61399E79
+P 14750 4250
+F 0 "C3.3?" H 14865 4296 50  0000 L CNN
+F 1 "C" H 14865 4205 50  0000 L CNN
+F 2 "" H 14788 4100 50  0001 C CNN
+F 3 "~" H 14750 4250 50  0001 C CNN
+	1    14750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5V?
+U 1 1 6139F3F8
+P 14750 3450
+F 0 "C5V?" H 14865 3496 50  0000 L CNN
+F 1 "C" H 14865 3405 50  0000 L CNN
+F 2 "" H 14788 3300 50  0001 C CNN
+F 3 "~" H 14750 3450 50  0001 C CNN
+	1    14750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5V?
+U 1 1 6139FAA6
+P 15100 3450
+F 0 "C5V?" H 15215 3496 50  0000 L CNN
+F 1 "C" H 15215 3405 50  0000 L CNN
+F 2 "" H 15138 3300 50  0001 C CNN
+F 3 "~" H 15100 3450 50  0001 C CNN
+	1    15100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3.3?
+U 1 1 613A062B
+P 15100 4250
+F 0 "C3.3?" H 15215 4296 50  0000 L CNN
+F 1 "C" H 15215 4205 50  0000 L CNN
+F 2 "" H 15138 4100 50  0001 C CNN
+F 3 "~" H 15100 4250 50  0001 C CNN
+	1    15100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 613A2092
+P 14750 4400
+F 0 "#PWR?" H 14750 4150 50  0001 C CNN
+F 1 "GND" H 14755 4227 50  0000 C CNN
+F 2 "" H 14750 4400 50  0001 C CNN
+F 3 "" H 14750 4400 50  0001 C CNN
+	1    14750 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 613A2680
+P 15100 4400
+F 0 "#PWR?" H 15100 4150 50  0001 C CNN
+F 1 "GND" H 15105 4227 50  0000 C CNN
+F 2 "" H 15100 4400 50  0001 C CNN
+F 3 "" H 15100 4400 50  0001 C CNN
+	1    15100 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 613A2B0E
+P 14750 3600
+F 0 "#PWR?" H 14750 3350 50  0001 C CNN
+F 1 "GND" H 14755 3427 50  0000 C CNN
+F 2 "" H 14750 3600 50  0001 C CNN
+F 3 "" H 14750 3600 50  0001 C CNN
+	1    14750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 613A2FB0
+P 15100 3600
+F 0 "#PWR?" H 15100 3350 50  0001 C CNN
+F 1 "GND" H 15105 3427 50  0000 C CNN
+F 2 "" H 15100 3600 50  0001 C CNN
+F 3 "" H 15100 3600 50  0001 C CNN
+	1    15100 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 613E344D
+P 1550 4950
+F 0 "U?" H 2950 5337 60  0000 C CNN
+F 1 "CD40109BNSR" H 2950 5231 60  0000 C CNN
+F 2 "NS16" H 2950 5190 60  0001 C CNN
+F 3 "" H 1550 4950 60  0000 C CNN
+	1    1550 4950
+	1    0    0    -1  
+$EndComp
+Text Label 1550 4950 2    50   ~ 0
++3V3
+Text Label 1550 5650 2    50   ~ 0
+GND
+Text Label 4350 4950 0    50   ~ 0
+HIGH_V
+Text Label 1550 5050 2    50   ~ 0
+PULLUP_HIGH
+Text Label 1550 5550 2    50   ~ 0
+PULLUP_HIGH
+Text Label 4350 5050 0    50   ~ 0
+PULLUP_HIGH
+Text Label 4350 5650 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 613FF819
+P 1550 6650
+F 0 "U?" H 2950 7037 60  0000 C CNN
+F 1 "CD40109BNSR" H 2950 6931 60  0000 C CNN
+F 2 "NS16" H 2950 6890 60  0001 C CNN
+F 3 "" H 1550 6650 60  0000 C CNN
+	1    1550 6650
+	1    0    0    -1  
+$EndComp
+Text Label 1550 6650 2    50   ~ 0
++3V3
+Text Label 1550 7350 2    50   ~ 0
+GND
+Text Label 4350 6650 0    50   ~ 0
+HIGH_V
+Text Label 1550 6750 2    50   ~ 0
+PULLUP_HIGH
+Text Label 1550 7250 2    50   ~ 0
+PULLUP_HIGH
+Text Label 4350 6750 0    50   ~ 0
+PULLUP_HIGH
+Text Label 4350 7350 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 61400961
+P 1550 8200
+F 0 "U?" H 2950 8587 60  0000 C CNN
+F 1 "CD40109BNSR" H 2950 8481 60  0000 C CNN
+F 2 "NS16" H 2950 8440 60  0001 C CNN
+F 3 "" H 1550 8200 60  0000 C CNN
+	1    1550 8200
+	1    0    0    -1  
+$EndComp
+Text Label 1550 8200 2    50   ~ 0
++3V3
+Text Label 1550 8900 2    50   ~ 0
+GND
+Text Label 4350 8200 0    50   ~ 0
+HIGH_V
+Text Label 1550 8300 2    50   ~ 0
+PULLUP_HIGH
+Text Label 1550 8800 2    50   ~ 0
+PULLUP_HIGH
+Text Label 4350 8300 0    50   ~ 0
+PULLUP_HIGH
+Text Label 4350 8900 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 614016CB
+P 1600 9800
+F 0 "U?" H 3000 10187 60  0000 C CNN
+F 1 "CD40109BNSR" H 3000 10081 60  0000 C CNN
+F 2 "NS16" H 3000 10040 60  0001 C CNN
+F 3 "" H 1600 9800 60  0000 C CNN
+	1    1600 9800
+	1    0    0    -1  
+$EndComp
+Text Label 1600 9800 2    50   ~ 0
++3V3
+Text Label 1600 10500 2    50   ~ 0
+GND
+Text Label 4400 9800 0    50   ~ 0
+HIGH_V
+Text Label 1600 9900 2    50   ~ 0
+PULLUP_HIGH
+Text Label 1600 10400 2    50   ~ 0
+PULLUP_HIGH
+Text Label 4400 9900 0    50   ~ 0
+PULLUP_HIGH
+Text Label 4400 10500 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 6141034C
+P 5900 4950
+F 0 "U?" H 7300 5337 60  0000 C CNN
+F 1 "CD40109BNSR" H 7300 5231 60  0000 C CNN
+F 2 "NS16" H 7300 5190 60  0001 C CNN
+F 3 "" H 5900 4950 60  0000 C CNN
+	1    5900 4950
+	1    0    0    -1  
+$EndComp
+Text Label 5900 4950 2    50   ~ 0
++3V3
+Text Label 5900 5650 2    50   ~ 0
+GND
+Text Label 8700 4950 0    50   ~ 0
+HIGH_V
+Text Label 5900 5050 2    50   ~ 0
+PULLUP_HIGH
+Text Label 5900 5550 2    50   ~ 0
+PULLUP_HIGH
+Text Label 8700 5050 0    50   ~ 0
+PULLUP_HIGH
+Text Label 8700 5650 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 61410359
+P 5900 6650
+F 0 "U?" H 7300 7037 60  0000 C CNN
+F 1 "CD40109BNSR" H 7300 6931 60  0000 C CNN
+F 2 "NS16" H 7300 6890 60  0001 C CNN
+F 3 "" H 5900 6650 60  0000 C CNN
+	1    5900 6650
+	1    0    0    -1  
+$EndComp
+Text Label 5900 6650 2    50   ~ 0
++3V3
+Text Label 5900 7350 2    50   ~ 0
+GND
+Text Label 8700 6650 0    50   ~ 0
+HIGH_V
+Text Label 5900 6750 2    50   ~ 0
+PULLUP_HIGH
+Text Label 5900 7250 2    50   ~ 0
+PULLUP_HIGH
+Text Label 8700 6750 0    50   ~ 0
+PULLUP_HIGH
+Text Label 8700 7350 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 61410366
+P 5900 8200
+F 0 "U?" H 7300 8587 60  0000 C CNN
+F 1 "CD40109BNSR" H 7300 8481 60  0000 C CNN
+F 2 "NS16" H 7300 8440 60  0001 C CNN
+F 3 "" H 5900 8200 60  0000 C CNN
+	1    5900 8200
+	1    0    0    -1  
+$EndComp
+Text Label 5900 8200 2    50   ~ 0
++3V3
+Text Label 5900 8900 2    50   ~ 0
+GND
+Text Label 8700 8200 0    50   ~ 0
+HIGH_V
+Text Label 5900 8300 2    50   ~ 0
+PULLUP_HIGH
+Text Label 5900 8800 2    50   ~ 0
+PULLUP_HIGH
+Text Label 8700 8300 0    50   ~ 0
+PULLUP_HIGH
+Text Label 8700 8900 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L 2021-08-27_11-58-03:CD40109BNSR U?
+U 1 1 61410373
+P 5950 9800
+F 0 "U?" H 7350 10187 60  0000 C CNN
+F 1 "CD40109BNSR" H 7350 10081 60  0000 C CNN
+F 2 "NS16" H 7350 10040 60  0001 C CNN
+F 3 "" H 5950 9800 60  0000 C CNN
+	1    5950 9800
+	1    0    0    -1  
+$EndComp
+Text Label 5950 9800 2    50   ~ 0
++3V3
+Text Label 5950 10500 2    50   ~ 0
+GND
+Text Label 8750 9800 0    50   ~ 0
+HIGH_V
+Text Label 5950 9900 2    50   ~ 0
+PULLUP_HIGH
+Text Label 5950 10400 2    50   ~ 0
+PULLUP_HIGH
+Text Label 8750 9900 0    50   ~ 0
+PULLUP_HIGH
+Text Label 8750 10500 0    50   ~ 0
+PULLUP_HIGH
+$Comp
+L Device:R R?
+U 1 1 614335E4
+P 15500 2700
+F 0 "R?" H 15570 2746 50  0000 L CNN
+F 1 "1K" H 15570 2655 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 15430 2700 50  0001 C CNN
+F 3 "~" H 15500 2700 50  0001 C CNN
+	1    15500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 614335EA
+P 15500 2550
+F 0 "#PWR?" H 15500 2400 50  0001 C CNN
+F 1 "+3V3" H 15515 2723 50  0000 C CNN
+F 2 "" H 15500 2550 50  0001 C CNN
+F 3 "" H 15500 2550 50  0001 C CNN
+	1    15500 2550
+	1    0    0    -1  
+$EndComp
+Text Label 15500 2850 2    50   ~ 0
+PULLUP_HIGH
+$Comp
+L Device:CP C?
+U 1 1 6149203D
+P 14400 5150
+F 0 "C?" H 14518 5196 50  0000 L CNN
+F 1 "CP" H 14518 5105 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 14438 5000 50  0001 C CNN
+F 3 "~" H 14400 5150 50  0001 C CNN
+	1    14400 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61492043
+P 14400 5300
+F 0 "#PWR?" H 14400 5050 50  0001 C CNN
+F 1 "GND" H 14405 5127 50  0000 C CNN
+F 2 "" H 14400 5300 50  0001 C CNN
+F 3 "" H 14400 5300 50  0001 C CNN
+	1    14400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 6149204F
+P 14750 5150
+F 0 "CHIGH?" H 14865 5196 50  0000 L CNN
+F 1 "C" H 14865 5105 50  0000 L CNN
+F 2 "" H 14788 5000 50  0001 C CNN
+F 3 "~" H 14750 5150 50  0001 C CNN
+	1    14750 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 61492055
+P 15100 5150
+F 0 "CHIGH?" H 15215 5196 50  0000 L CNN
+F 1 "C" H 15215 5105 50  0000 L CNN
+F 2 "" H 15138 5000 50  0001 C CNN
+F 3 "~" H 15100 5150 50  0001 C CNN
+	1    15100 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6149205B
+P 14750 5300
+F 0 "#PWR?" H 14750 5050 50  0001 C CNN
+F 1 "GND" H 14755 5127 50  0000 C CNN
+F 2 "" H 14750 5300 50  0001 C CNN
+F 3 "" H 14750 5300 50  0001 C CNN
+	1    14750 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61492061
+P 15100 5300
+F 0 "#PWR?" H 15100 5050 50  0001 C CNN
+F 1 "GND" H 15105 5127 50  0000 C CNN
+F 2 "" H 15100 5300 50  0001 C CNN
+F 3 "" H 15100 5300 50  0001 C CNN
+	1    15100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6149CC8E
+P 14400 3300
+F 0 "#PWR?" H 14400 3150 50  0001 C CNN
+F 1 "+5V" H 14415 3473 50  0000 C CNN
+F 2 "" H 14400 3300 50  0001 C CNN
+F 3 "" H 14400 3300 50  0001 C CNN
+	1    14400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6149DC15
+P 15100 3300
+F 0 "#PWR?" H 15100 3150 50  0001 C CNN
+F 1 "+5V" H 15115 3473 50  0000 C CNN
+F 2 "" H 15100 3300 50  0001 C CNN
+F 3 "" H 15100 3300 50  0001 C CNN
+	1    15100 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6149E3D6
+P 14750 3300
+F 0 "#PWR?" H 14750 3150 50  0001 C CNN
+F 1 "+5V" H 14765 3473 50  0000 C CNN
+F 2 "" H 14750 3300 50  0001 C CNN
+F 3 "" H 14750 3300 50  0001 C CNN
+	1    14750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 614A004A
+P 14400 4100
+F 0 "#PWR?" H 14400 3950 50  0001 C CNN
+F 1 "+3V3" H 14415 4273 50  0000 C CNN
+F 2 "" H 14400 4100 50  0001 C CNN
+F 3 "" H 14400 4100 50  0001 C CNN
+	1    14400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 614A09A1
+P 14750 4100
+F 0 "#PWR?" H 14750 3950 50  0001 C CNN
+F 1 "+3V3" H 14765 4273 50  0000 C CNN
+F 2 "" H 14750 4100 50  0001 C CNN
+F 3 "" H 14750 4100 50  0001 C CNN
+	1    14750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 614A1169
+P 15100 4100
+F 0 "#PWR?" H 15100 3950 50  0001 C CNN
+F 1 "+3V3" H 15115 4273 50  0000 C CNN
+F 2 "" H 15100 4100 50  0001 C CNN
+F 3 "" H 15100 4100 50  0001 C CNN
+	1    15100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614A3BCF
+P 14400 5000
+F 0 "#PWR?" H 14400 4850 50  0001 C CNN
+F 1 "+15V" H 14415 5173 50  0000 C CNN
+F 2 "" H 14400 5000 50  0001 C CNN
+F 3 "" H 14400 5000 50  0001 C CNN
+	1    14400 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614A4241
+P 14750 5000
+F 0 "#PWR?" H 14750 4850 50  0001 C CNN
+F 1 "+15V" H 14765 5173 50  0000 C CNN
+F 2 "" H 14750 5000 50  0001 C CNN
+F 3 "" H 14750 5000 50  0001 C CNN
+	1    14750 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614A48CF
+P 15100 5000
+F 0 "#PWR?" H 15100 4850 50  0001 C CNN
+F 1 "+15V" H 15115 5173 50  0000 C CNN
+F 2 "" H 15100 5000 50  0001 C CNN
+F 3 "" H 15100 5000 50  0001 C CNN
+	1    15100 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 614AD925
+P 14400 6050
+F 0 "CHIGH?" H 14515 6096 50  0000 L CNN
+F 1 "C" H 14515 6005 50  0000 L CNN
+F 2 "" H 14438 5900 50  0001 C CNN
+F 3 "~" H 14400 6050 50  0001 C CNN
+	1    14400 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 614AD92B
+P 14750 6050
+F 0 "CHIGH?" H 14865 6096 50  0000 L CNN
+F 1 "C" H 14865 6005 50  0000 L CNN
+F 2 "" H 14788 5900 50  0001 C CNN
+F 3 "~" H 14750 6050 50  0001 C CNN
+	1    14750 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614AD931
+P 14400 6200
+F 0 "#PWR?" H 14400 5950 50  0001 C CNN
+F 1 "GND" H 14405 6027 50  0000 C CNN
+F 2 "" H 14400 6200 50  0001 C CNN
+F 3 "" H 14400 6200 50  0001 C CNN
+	1    14400 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614AD937
+P 14750 6200
+F 0 "#PWR?" H 14750 5950 50  0001 C CNN
+F 1 "GND" H 14755 6027 50  0000 C CNN
+F 2 "" H 14750 6200 50  0001 C CNN
+F 3 "" H 14750 6200 50  0001 C CNN
+	1    14750 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614AD93D
+P 14400 5900
+F 0 "#PWR?" H 14400 5750 50  0001 C CNN
+F 1 "+15V" H 14415 6073 50  0000 C CNN
+F 2 "" H 14400 5900 50  0001 C CNN
+F 3 "" H 14400 5900 50  0001 C CNN
+	1    14400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614AD943
+P 14750 5900
+F 0 "#PWR?" H 14750 5750 50  0001 C CNN
+F 1 "+15V" H 14765 6073 50  0000 C CNN
+F 2 "" H 14750 5900 50  0001 C CNN
+F 3 "" H 14750 5900 50  0001 C CNN
+	1    14750 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 614AE58B
+P 15100 6050
+F 0 "CHIGH?" H 15215 6096 50  0000 L CNN
+F 1 "C" H 15215 6005 50  0000 L CNN
+F 2 "" H 15138 5900 50  0001 C CNN
+F 3 "~" H 15100 6050 50  0001 C CNN
+	1    15100 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 614AE591
+P 15450 6050
+F 0 "CHIGH?" H 15565 6096 50  0000 L CNN
+F 1 "C" H 15565 6005 50  0000 L CNN
+F 2 "" H 15488 5900 50  0001 C CNN
+F 3 "~" H 15450 6050 50  0001 C CNN
+	1    15450 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614AE597
+P 15100 6200
+F 0 "#PWR?" H 15100 5950 50  0001 C CNN
+F 1 "GND" H 15105 6027 50  0000 C CNN
+F 2 "" H 15100 6200 50  0001 C CNN
+F 3 "" H 15100 6200 50  0001 C CNN
+	1    15100 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614AE59D
+P 15450 6200
+F 0 "#PWR?" H 15450 5950 50  0001 C CNN
+F 1 "GND" H 15455 6027 50  0000 C CNN
+F 2 "" H 15450 6200 50  0001 C CNN
+F 3 "" H 15450 6200 50  0001 C CNN
+	1    15450 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614AE5A3
+P 15100 5900
+F 0 "#PWR?" H 15100 5750 50  0001 C CNN
+F 1 "+15V" H 15115 6073 50  0000 C CNN
+F 2 "" H 15100 5900 50  0001 C CNN
+F 3 "" H 15100 5900 50  0001 C CNN
+	1    15100 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614AE5A9
+P 15450 5900
+F 0 "#PWR?" H 15450 5750 50  0001 C CNN
+F 1 "+15V" H 15465 6073 50  0000 C CNN
+F 2 "" H 15450 5900 50  0001 C CNN
+F 3 "" H 15450 5900 50  0001 C CNN
+	1    15450 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 614B5519
+P 14400 6850
+F 0 "CHIGH?" H 14515 6896 50  0000 L CNN
+F 1 "C" H 14515 6805 50  0000 L CNN
+F 2 "" H 14438 6700 50  0001 C CNN
+F 3 "~" H 14400 6850 50  0001 C CNN
+	1    14400 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C CHIGH?
+U 1 1 614B551F
+P 14750 6850
+F 0 "CHIGH?" H 14865 6896 50  0000 L CNN
+F 1 "C" H 14865 6805 50  0000 L CNN
+F 2 "" H 14788 6700 50  0001 C CNN
+F 3 "~" H 14750 6850 50  0001 C CNN
+	1    14750 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614B5525
+P 14400 7000
+F 0 "#PWR?" H 14400 6750 50  0001 C CNN
+F 1 "GND" H 14405 6827 50  0000 C CNN
+F 2 "" H 14400 7000 50  0001 C CNN
+F 3 "" H 14400 7000 50  0001 C CNN
+	1    14400 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614B552B
+P 14750 7000
+F 0 "#PWR?" H 14750 6750 50  0001 C CNN
+F 1 "GND" H 14755 6827 50  0000 C CNN
+F 2 "" H 14750 7000 50  0001 C CNN
+F 3 "" H 14750 7000 50  0001 C CNN
+	1    14750 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614B5531
+P 14400 6700
+F 0 "#PWR?" H 14400 6550 50  0001 C CNN
+F 1 "+15V" H 14415 6873 50  0000 C CNN
+F 2 "" H 14400 6700 50  0001 C CNN
+F 3 "" H 14400 6700 50  0001 C CNN
+	1    14400 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 614B5537
+P 14750 6700
+F 0 "#PWR?" H 14750 6550 50  0001 C CNN
+F 1 "+15V" H 14765 6873 50  0000 C CNN
+F 2 "" H 14750 6700 50  0001 C CNN
+F 3 "" H 14750 6700 50  0001 C CNN
+	1    14750 6700
+	1    0    0    -1  
+$EndComp
+Text Label 11150 1150 0    50   ~ 0
+PA9
+Text Label 11150 1250 0    50   ~ 0
+PA11
+Text Label 11150 1450 0    50   ~ 0
+PA12
+Text Label 11150 1550 0    50   ~ 0
+PA13
+Text Label 11150 1750 0    50   ~ 0
+PA14
+Text Label 11150 1850 0    50   ~ 0
+PA15
+Text Label 11150 2050 0    50   ~ 0
+PC0
+Text Label 11150 2150 0    50   ~ 0
+PC1
+Text Label 11150 2250 0    50   ~ 0
+PC2
+Text Label 11150 2350 0    50   ~ 0
+PC3
+Text Label 11150 2550 0    50   ~ 0
+PC4
+Text Label 11150 2650 0    50   ~ 0
+PC5
+Text Label 11150 2850 0    50   ~ 0
+PC6
+Text Label 11150 2950 0    50   ~ 0
+PC8
+Text Label 11150 3150 0    50   ~ 0
+PC9
+Text Label 11150 3250 0    50   ~ 0
+PC10
+Text Label 8750 1150 2    50   ~ 0
+PA9_HIGH
+Text Label 8750 1250 2    50   ~ 0
+PA11_HIGH
+Text Label 8750 1450 2    50   ~ 0
+PA12_HIGH
+Text Label 8750 1550 2    50   ~ 0
+PA13_HIGH
+Text Label 8750 1750 2    50   ~ 0
+PA14_HIGH
+Text Label 8750 1850 2    50   ~ 0
+PA15_HIGH
+Text Label 8750 2050 2    50   ~ 0
+PC0_HIGH
+Text Label 8750 2150 2    50   ~ 0
+PC1_HIGH
+Text Label 8750 2250 2    50   ~ 0
+PC2_HIGH
+Text Label 8750 2350 2    50   ~ 0
+PC3_HIGH
+Text Label 8750 2550 2    50   ~ 0
+PC4_HIGH
+Text Label 8750 2650 2    50   ~ 0
+PC5_HIGH
+Text Label 8750 2850 2    50   ~ 0
+PC6_HIGH
+Text Label 8750 2950 2    50   ~ 0
+PC8_HIGH
+Text Label 8750 3150 2    50   ~ 0
+PC9_HIGH
+Text Label 8750 3250 2    50   ~ 0
+PC10_HIGH
+$EndSCHEMATC
