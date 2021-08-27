@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name footprints)(type KiCad)(uri /home/andre/Documents/projects/ClockGen/hardware/lib/74ALVC164245/footprints.pretty)(options "")(descr ""))
+  (lib (name Arduino)(type KiCad)(uri /home/andre/Documents/projects/ClockGen/hardware/lib/arduino/Arduino.pretty)(options "")(descr ""))
+)
