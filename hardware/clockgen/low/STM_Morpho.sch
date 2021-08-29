@@ -188,7 +188,7 @@ PA2
 Text Label 2250 3050 2    50   ~ 0
 PA3
 $Comp
-L 2021-08-26_08-32-07:74ALVC164245DLG4 U1
+L STM_Morpho-rescue:74ALVC164245DLG4-2021-08-26_08-32-07 U1
 U 1 1 6128B1C2
 P 4400 1050
 F 0 "U1" H 5600 1437 60  0000 C CNN
@@ -287,7 +287,7 @@ PULLUP
 Text Label 4400 3350 2    50   ~ 0
 PULLUP
 $Comp
-L 2021-08-26_08-32-07:74ALVC164245DLG4 U2
+L STM_Morpho-rescue:74ALVC164245DLG4-2021-08-26_08-32-07 U2
 U 1 1 6130056B
 P 8750 1050
 F 0 "U2" H 9950 1437 60  0000 C CNN
@@ -720,29 +720,6 @@ Text Label 13300 2500 0    50   ~ 0
 PA11_5V
 Text Label 13300 2600 0    50   ~ 0
 PA9_5V
-Text Label 12800 2600 2    50   ~ 0
-PA8_5V
-Text Label 12800 2500 2    50   ~ 0
-PA5_5V
-Text Label 12800 2400 2    50   ~ 0
-PA4_5V
-Text Label 12800 2300 2    50   ~ 0
-PA3_5V
-Text Label 12800 2200 2    50   ~ 0
-PA2_5V
-Text Label 12800 2100 2    50   ~ 0
-PA1_5V
-$Comp
-L Connector_Generic:Conn_02x20_Counter_Clockwise J1
-U 1 1 612BBAFC
-P 13000 1800
-F 0 "J1" H 13050 2917 50  0000 C CNN
-F 1 "Conn_02x20_Odd_Even" H 13050 2826 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 13000 1800 50  0001 C CNN
-F 3 "~" H 13000 1800 50  0001 C CNN
-	1    13000 1800
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR06
 U 1 1 6137C9E3
@@ -765,26 +742,50 @@ F 3 "~" H 14400 3450 50  0001 C CNN
 	1    14400 3450
 	1    0    0    -1  
 $EndComp
-Text Label 12800 2000 2    50   ~ 0
-PA7_5V
-Text Label 12800 1900 2    50   ~ 0
-PA6_5V
-Text Label 12800 1800 2    50   ~ 0
-PB9_5V
-Text Label 12800 1700 2    50   ~ 0
-PB8_5V
-Text Label 12800 1600 2    50   ~ 0
-PC7_5V
-Text Label 12800 1500 2    50   ~ 0
-PA0_5V
-Text Label 12800 1400 2    50   ~ 0
-PB6_5V
-Text Label 12800 1300 2    50   ~ 0
-PB5_5V
-Text Label 12800 1200 2    50   ~ 0
-PB10_5V
-Text Label 12800 1100 2    50   ~ 0
-PA10_5V
 Text Label 14400 2850 2    50   ~ 0
 PULLUP
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J1
+U 1 1 612BBAFC
+P 13000 1800
+F 0 "J1" H 13050 2917 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 13050 2826 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 13000 1800 50  0001 C CNN
+F 3 "~" H 13000 1800 50  0001 C CNN
+	1    13000 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 14400 2550
+Text Label 12800 2600 2    50   ~ 0
+PA10_5V
+Text Label 12800 2500 2    50   ~ 0
+PB10_5V
+Text Label 12800 2400 2    50   ~ 0
+PB5_5V
+Text Label 12800 2300 2    50   ~ 0
+PB6_5V
+Text Label 12800 2200 2    50   ~ 0
+PA0_5V
+Text Label 12800 2100 2    50   ~ 0
+PC7_5V
+Text Label 12800 2000 2    50   ~ 0
+PB8_5V
+Text Label 12800 1900 2    50   ~ 0
+PB9_5V
+Text Label 12800 1800 2    50   ~ 0
+PA6_5V
+Text Label 12800 1700 2    50   ~ 0
+PA7_5V
+Text Label 12800 1600 2    50   ~ 0
+PA1_5V
+Text Label 12800 1500 2    50   ~ 0
+PA2_5V
+Text Label 12800 1400 2    50   ~ 0
+PA3_5V
+Text Label 12800 1300 2    50   ~ 0
+PA4_5V
+Text Label 12800 1200 2    50   ~ 0
+PA5_5V
+Text Label 12800 1100 2    50   ~ 0
+PA8_5V
 $EndSCHEMATC

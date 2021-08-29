@@ -1,4 +1,4 @@
-update=Fri 27 Aug 2021 04:57:16 PM CEST
+update=Sa 28 Aug 2021 12:50:33 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -194,7 +194,7 @@ Enabled=0
 [pcbnew/Layer.B.SilkS]
 Enabled=1
 [pcbnew/Layer.F.SilkS]
-Enabled=0
+Enabled=1
 [pcbnew/Layer.B.Mask]
 Enabled=1
 [pcbnew/Layer.F.Mask]
@@ -236,7 +236,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=HighPower
 Clearance=0.2
-TrackWidth=0.5
+TrackWidth=0.4
 ViaDiameter=0.6
 ViaDrill=0.4
 uViaDiameter=0.3
@@ -247,7 +247,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=Power
 Clearance=0.2
-TrackWidth=0.35
+TrackWidth=0.3
 ViaDiameter=0.6
 ViaDrill=0.4
 uViaDiameter=0.3

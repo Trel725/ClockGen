@@ -1,0 +1,117 @@
+
+(rules PCB STM_Morpho
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 2645)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
+  )
+  (via 
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:400_um-HighPower" "Via[0-1]_600:400_um" HighPower
+  )
+  (via 
+    "Via[0-1]_600:400_um-Power" "Via[0-1]_600:400_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_600:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (via_rule
+    HighPower "Via[0-1]_600:400_um-HighPower"
+  )
+  (via_rule
+    Power "Via[0-1]_600:400_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND /PC0 /PC3 /PC1 /PC2 /PA4 /PA1 /PA0
+    /NC /PA15 /PA14 /PA13 /PC10 /PA3 /PA2 /PC4
+    /PA10 /PB5 /PB10 /PA8 /PA9 /PC7 /PB6 /PA7
+    /PA11 /PA6 /PA12 /PA5 /PC5 /PB9 /PC6 /PB8
+    /PC8 /PC9 "/PA9_5V" "/PA8_5V" "/PA11_5V" "/PA5_5V" "/PA12_5V" "/PA4_5V"
+    "/PA13_5V" "/PA3_5V" "/PA14_5V" "/PA2_5V" "/PA15_5V" "/PA1_5V" "/PC0_5V" "/PA7_5V"
+    "/PC1_5V" "/PA6_5V" "/PC2_5V" "/PB9_5V" "/PC3_5V" "/PB8_5V" "/PC4_5V" "/PC7_5V"
+    "/PC5_5V" "/PA0_5V" "/PC6_5V" "/PB6_5V" "/PC8_5V" "/PB5_5V" "/PC9_5V" "/PB10_5V"
+    "/PC10_5V" "/PA10_5V" /PULLUP /PULLDOWN
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class HighPower
+    +3V3 +5V
+    (clearance_class HighPower)
+    (via_rule HighPower)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
