@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/user/Documents/projects/clockgen/hardware/clockgen/screw_terminal_adapter/screw_adapter.sch</source>
+    <date>Mon 30 Aug 2021 01:56:45 PM CEST</date>
+    <tool>Eeschema 5.99.0+really5.1.10+dfsg1-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>screw_adapter.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Conn_02x20_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x20_Odd_Even" description="Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>613DBB08</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61304039</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6130674F</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6131389A</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>613138A0</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>612CA786</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>612CBDA8</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>612CCEC9</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>Screw_Terminal_01x08</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x08" description="Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>612CD8F4</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Screw_Terminal_01x08">
+      <description>Generic screw terminal, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x08</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x20_Odd_Even">
+      <description>Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x20_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+        <pin num="23" name="Pin_23" type="passive"/>
+        <pin num="24" name="Pin_24" type="passive"/>
+        <pin num="25" name="Pin_25" type="passive"/>
+        <pin num="26" name="Pin_26" type="passive"/>
+        <pin num="27" name="Pin_27" type="passive"/>
+        <pin num="28" name="Pin_28" type="passive"/>
+        <pin num="29" name="Pin_29" type="passive"/>
+        <pin num="30" name="Pin_30" type="passive"/>
+        <pin num="31" name="Pin_31" type="passive"/>
+        <pin num="32" name="Pin_32" type="passive"/>
+        <pin num="33" name="Pin_33" type="passive"/>
+        <pin num="34" name="Pin_34" type="passive"/>
+        <pin num="35" name="Pin_35" type="passive"/>
+        <pin num="36" name="Pin_36" type="passive"/>
+        <pin num="37" name="Pin_37" type="passive"/>
+        <pin num="38" name="Pin_38" type="passive"/>
+        <pin num="39" name="Pin_39" type="passive"/>
+        <pin num="40" name="Pin_40" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/PA1_5V">
+      <node ref="J1" pin="15"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="2" name="/PA2_5V">
+      <node ref="J1" pin="13"/>
+      <node ref="J2" pin="4"/>
+    </net>
+    <net code="3" name="/PA3_5V">
+      <node ref="J2" pin="5"/>
+      <node ref="J1" pin="11"/>
+    </net>
+    <net code="4" name="/PA4_5V">
+      <node ref="J1" pin="9"/>
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="5" name="/PA5_5V">
+      <node ref="J2" pin="7"/>
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="6" name="/PA8_5V">
+      <node ref="J2" pin="8"/>
+      <node ref="J1" pin="5"/>
+    </net>
+    <net code="7" name="GND">
+      <node ref="J1" pin="4"/>
+      <node ref="J1" pin="38"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J6" pin="8"/>
+      <node ref="J1" pin="40"/>
+      <node ref="J8" pin="4"/>
+      <node ref="J7" pin="3"/>
+      <node ref="J7" pin="4"/>
+      <node ref="J7" pin="5"/>
+      <node ref="J7" pin="6"/>
+      <node ref="J7" pin="7"/>
+      <node ref="J7" pin="8"/>
+      <node ref="J8" pin="1"/>
+      <node ref="J8" pin="2"/>
+      <node ref="J8" pin="3"/>
+      <node ref="J8" pin="5"/>
+      <node ref="J8" pin="6"/>
+      <node ref="J6" pin="7"/>
+      <node ref="J8" pin="8"/>
+      <node ref="J9" pin="1"/>
+      <node ref="J9" pin="2"/>
+      <node ref="J9" pin="3"/>
+      <node ref="J9" pin="4"/>
+      <node ref="J9" pin="5"/>
+      <node ref="J9" pin="8"/>
+      <node ref="J9" pin="6"/>
+      <node ref="J9" pin="7"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J6" pin="6"/>
+      <node ref="J6" pin="5"/>
+      <node ref="J6" pin="4"/>
+      <node ref="J6" pin="3"/>
+      <node ref="J6" pin="2"/>
+      <node ref="J6" pin="1"/>
+      <node ref="J7" pin="1"/>
+      <node ref="J8" pin="7"/>
+    </net>
+    <net code="8" name="/PB6_5V">
+      <node ref="J1" pin="29"/>
+      <node ref="J3" pin="4"/>
+    </net>
+    <net code="9" name="/PC4_5V">
+      <node ref="J4" pin="3"/>
+      <node ref="J1" pin="16"/>
+    </net>
+    <net code="10" name="/PA7_5V">
+      <node ref="J1" pin="17"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="11" name="/PC3_5V">
+      <node ref="J4" pin="2"/>
+      <node ref="J1" pin="18"/>
+    </net>
+    <net code="12" name="/PA6_5V">
+      <node ref="J1" pin="19"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="13" name="/PC2_5V">
+      <node ref="J1" pin="20"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="14" name="/PB9_5V">
+      <node ref="J1" pin="21"/>
+      <node ref="J3" pin="8"/>
+    </net>
+    <net code="15" name="/PC1_5V">
+      <node ref="J5" pin="8"/>
+      <node ref="J1" pin="22"/>
+    </net>
+    <net code="16" name="/PB8_5V">
+      <node ref="J3" pin="7"/>
+      <node ref="J1" pin="23"/>
+    </net>
+    <net code="17" name="/PC0_5V">
+      <node ref="J5" pin="7"/>
+      <node ref="J1" pin="24"/>
+    </net>
+    <net code="18" name="/PC7_5V">
+      <node ref="J3" pin="6"/>
+      <node ref="J1" pin="25"/>
+    </net>
+    <net code="19" name="/PA15_5V">
+      <node ref="J5" pin="6"/>
+      <node ref="J1" pin="26"/>
+    </net>
+    <net code="20" name="/PA0_5V">
+      <node ref="J3" pin="5"/>
+      <node ref="J1" pin="27"/>
+    </net>
+    <net code="21" name="/PA14_5V">
+      <node ref="J1" pin="28"/>
+      <node ref="J5" pin="5"/>
+    </net>
+    <net code="22" name="/+3V3">
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="23" name="/PA13_5V">
+      <node ref="J1" pin="30"/>
+      <node ref="J5" pin="4"/>
+    </net>
+    <net code="24" name="/PB5_5V">
+      <node ref="J1" pin="31"/>
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="25" name="/PA12_5V">
+      <node ref="J1" pin="32"/>
+      <node ref="J5" pin="3"/>
+    </net>
+    <net code="26" name="/PB10_5V">
+      <node ref="J3" pin="2"/>
+      <node ref="J1" pin="33"/>
+    </net>
+    <net code="27" name="/PA11_5V">
+      <node ref="J5" pin="2"/>
+      <node ref="J1" pin="34"/>
+    </net>
+    <net code="28" name="/PA10_5V">
+      <node ref="J1" pin="35"/>
+      <node ref="J3" pin="1"/>
+    </net>
+    <net code="29" name="/PA9_5V">
+      <node ref="J1" pin="36"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="30" name="/NC">
+      <node ref="J1" pin="37"/>
+      <node ref="J1" pin="39"/>
+    </net>
+    <net code="31" name="/PC10_5V">
+      <node ref="J4" pin="8"/>
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="32" name="/+5V">
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="33" name="/PC8_5V">
+      <node ref="J4" pin="6"/>
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="34" name="/PC6_5V">
+      <node ref="J4" pin="5"/>
+      <node ref="J1" pin="12"/>
+    </net>
+    <net code="35" name="/PC5_5V">
+      <node ref="J4" pin="4"/>
+      <node ref="J1" pin="14"/>
+    </net>
+    <net code="36" name="/PC9_5V">
+      <node ref="J1" pin="8"/>
+      <node ref="J4" pin="7"/>
+    </net>
+  </nets>
+</export>
