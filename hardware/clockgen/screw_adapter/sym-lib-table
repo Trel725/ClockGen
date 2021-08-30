@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name STM_Morpho-rescue)(type Legacy)(uri /home/andre/Documents/projects/ClockGen/hardware/clockgen/high/STM_Morpho-rescue.lib)(options "")(descr ""))
+)

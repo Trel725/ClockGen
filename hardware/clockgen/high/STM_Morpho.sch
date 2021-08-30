@@ -941,7 +941,7 @@ U 1 1 614E4443
 P 12200 7600
 F 0 "J3" H 12228 7576 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 12228 7485 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12200 7600 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 12200 7600 50  0001 C CNN
 F 3 "~" H 12200 7600 50  0001 C CNN
 	1    12200 7600
 	1    0    0    -1  

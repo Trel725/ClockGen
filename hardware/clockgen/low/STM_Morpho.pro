@@ -1,4 +1,4 @@
-update=Sa 28 Aug 2021 12:50:33 CEST
+update=Mo 30 Aug 2021 09:25:39 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -236,7 +236,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=HighPower
 Clearance=0.2
-TrackWidth=0.4
+TrackWidth=0.5
 ViaDiameter=0.6
 ViaDrill=0.4
 uViaDiameter=0.3

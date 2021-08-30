@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_02x19_Odd_Even CN7
-U 1 1 5F9F2DD0
-P 1300 2150
-F 0 "CN7" H 1350 3267 50  0000 C CNN
-F 1 "Conn_02x19_Odd_Even" H 1350 3176 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical" H 1300 2150 50  0001 C CNN
-F 3 "~" H 1300 2150 50  0001 C CNN
-	1    1300 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_02x19_Odd_Even CN10
 U 1 1 5F9F448E
 P 2450 2150
@@ -43,10 +32,6 @@ Text Label 1100 1450 2    50   ~ 0
 VDD
 Text Label 1100 1550 2    50   ~ 0
 BOOT0
-Text Label 1100 1650 2    50   ~ 0
-NC
-Text Label 1100 1750 2    50   ~ 0
-NC
 Text Label 1100 1850 2    50   ~ 0
 PA13
 Text Label 1100 1950 2    50   ~ 0
@@ -81,8 +66,6 @@ Text Label 1600 1450 0    50   ~ 0
 E5V
 Text Label 1600 1550 0    50   ~ 0
 GND
-Text Label 1600 1650 0    50   ~ 0
-NC
 Text Label 1600 1750 0    50   ~ 0
 IOREF
 Text Label 1600 1850 0    50   ~ 0
@@ -97,8 +80,6 @@ Text Label 1600 2250 0    50   ~ 0
 GND
 Text Label 1600 2350 0    50   ~ 0
 VIN
-Text Label 1600 2450 0    50   ~ 0
-NC
 Text Label 1600 2550 0    50   ~ 0
 PA0
 Text Label 1600 2650 0    50   ~ 0
@@ -119,16 +100,12 @@ Text Label 2750 1450 0    50   ~ 0
 PC5
 Text Label 2750 1550 0    50   ~ 0
 U5V
-Text Label 2750 1650 0    50   ~ 0
-NC
 Text Label 2750 1750 0    50   ~ 0
 PA12
 Text Label 2750 1850 0    50   ~ 0
 PA11
 Text Label 2750 1950 0    50   ~ 0
 PB12
-Text Label 2750 2050 0    50   ~ 0
-NC
 Text Label 2750 2150 0    50   ~ 0
 GND
 Text Label 2750 2250 0    50   ~ 0
@@ -145,10 +122,6 @@ Text Label 2750 2750 0    50   ~ 0
 AGND
 Text Label 2750 2850 0    50   ~ 0
 PC4
-Text Label 2750 2950 0    50   ~ 0
-NC
-Text Label 2750 3050 0    50   ~ 0
-NC
 Text Label 2250 1250 2    50   ~ 0
 PC9
 Text Label 2250 1350 2    50   ~ 0
@@ -672,10 +645,6 @@ F 3 "" H 15300 7750 50  0001 C CNN
 $EndComp
 Text Label 15300 7750 1    50   ~ 0
 GND
-Text Label 12800 2800 2    50   ~ 0
-NC
-Text Label 12800 2700 2    50   ~ 0
-NC
 Text Label 13300 2800 0    50   ~ 0
 GND
 Text Label 13300 900  0    50   ~ 0
@@ -755,7 +724,6 @@ F 3 "~" H 13000 1800 50  0001 C CNN
 	1    13000 1800
 	1    0    0    -1  
 $EndComp
-Connection ~ 14400 2550
 Text Label 12800 2600 2    50   ~ 0
 PA10_5V
 Text Label 12800 2500 2    50   ~ 0
@@ -788,4 +756,26 @@ Text Label 12800 1200 2    50   ~ 0
 PA5_5V
 Text Label 12800 1100 2    50   ~ 0
 PA8_5V
+NoConn ~ 12800 2800
+NoConn ~ 12800 2700
+NoConn ~ 2750 2950
+NoConn ~ 2750 3050
+$Comp
+L Connector_Generic:Conn_02x19_Odd_Even CN7
+U 1 1 5F9F2DD0
+P 1300 2150
+F 0 "CN7" H 1350 3267 50  0000 C CNN
+F 1 "Conn_02x19_Odd_Even" H 1350 3176 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical" H 1300 2150 50  0001 C CNN
+F 3 "~" H 1300 2150 50  0001 C CNN
+	1    1300 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1600 2450
+NoConn ~ 1100 1650
+NoConn ~ 1100 1750
+NoConn ~ 2750 1650
+NoConn ~ 2750 2050
+NoConn ~ 1600 1650
+NoConn ~ 1700 1700
 $EndSCHEMATC
