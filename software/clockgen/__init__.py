@@ -1,9 +1,7 @@
 import os
 import json
 
-from .register import Register
-from .periph import Periph
-from .timer import Timer
+from .hw import Timer
 from .proggen import ProgramGen
 from .constants import MASTER_TIMER
 

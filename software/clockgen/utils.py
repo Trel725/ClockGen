@@ -2,12 +2,22 @@ import zlib
 import warnings
 from . import pin_mapping, hw_desc
 from . import Timer
-from .gpio import GPIO
+from .hw import GPIO
 from .constants import (SERIAL_START, SERIAL_END,
                         SERIAL_EXECUTE, MASTER_TIMER, GPIO_LIST)
 
 
 def get_timer(tim_id):
+    ''' instantiate and returns instance of the timer, specified
+    by tim_id
+    
+    args:
+        tim_id: string describing timer to use:
+        - "TIM1" or "tim1" to specify first TIM1
+        - "PA0" or "pa0" to select timer, generating signal on PA0
+        - "D9" or "d9" to select timer, generating on ping D9
+                                        (in arduino notation)
+    '''
     try:
         assert isinstance(tim_id, str)
         if tim_id[:3].lower() == "tim":
@@ -43,6 +53,13 @@ def get_timer(tim_id):
 
 
 def get_gpio(gpio_id):
+    ''' instantiate and returns instance of GPIO, specified
+    by gpio_id
+    
+    args:
+        gpio_id: string describing GPIO to use:
+        - "GPIOA" to specify GPIOA.
+    '''
     assert isinstance(gpio_id, str)
     if gpio_id.upper() in GPIO_LIST:
         gpio_id = gpio_id.upper()
@@ -55,10 +72,14 @@ def get_gpio(gpio_id):
 
 
 def start_execution(ser):
+    ''' Start actual execution of the program
+    by sending START_EXECUTION byte to microcontroller
+    '''
     ser.write(SERIAL_EXECUTE)
 
 
 def send_program(ser, prog):
+    ''' send the generated program to microntroller '''
     crc = zlib.crc32(prog).to_bytes(4, byteorder="little")
     packet = SERIAL_START + prog + crc + SERIAL_END
     ser.write(packet)
