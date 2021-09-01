@@ -4,7 +4,9 @@ from .constants import EOF, EOP
 
 
 class ProgramGen(object):
-    """docstring for ProgramGen"""
+    """Program generator for microntroller. Provides
+    methods to generate program from list of hardware
+    """
 
     def __init__(self):
         super(ProgramGen, self).__init__()
@@ -13,15 +15,18 @@ class ProgramGen(object):
 
     @staticmethod
     def _flatten_cmds(cmds):
+        ''' return flat list of commands from '''
         return [elem for iterable in cmds for elem in iterable[1:]]
 
     @staticmethod
     def _binarize(vals):
+        '''convert input list to little-ended binary'''
         data_bin = b"".join([item.to_bytes(4, byteorder="little")
                              for item in vals])
         return data_bin
 
     def print_program(self):
+        '''visualize the generated program'''
         for frame in self.opt_frames:
             print(f"@ {frame['time']}")
             for name, addr, val in frame['cmds']:
@@ -29,6 +34,10 @@ class ProgramGen(object):
 
     @staticmethod
     def combine_by_time(frames):
+        ''' simple optimization pass that
+        combines together frames, which
+        should be executed at the same time
+        '''
         out_frames = []
         for fr in frames:
             if not out_frames:
@@ -41,16 +50,24 @@ class ProgramGen(object):
         return out_frames
 
     def optimize(self, frames):
+        ''' performs program optimization '''
         frames = sorted(frames, key=lambda x: x['time'])
         return self.combine_by_time(frames)
 
     def generate_program(self, hw_list):
+        ''' Generate complete binary program from list of hardware
+        args:
+            hw_list - list of instances of classes, inherited from BaseInterfase
+        '''
         self.frames = [copy.deepcopy(frame)
                        for hw in hw_list for frame in hw.frames]
         self.opt_frames = self.optimize(self.frames)
         return self.binarize_program(self.opt_frames)
 
     def binarize_program(self, frames):
+        ''' Build binary program by wrapping each frame in the format:
+        time_stamp - commands to execute - END OF FRAME
+        and binarizing sequence of such frames'''
         prg = []
         for frame in frames:
             prg.append(frame['time'])
