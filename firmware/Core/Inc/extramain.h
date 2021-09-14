@@ -20,7 +20,6 @@
 
 //hardware handles
 UART_HandleTypeDef huart2;
-
 // function prototypes
 
 // constants

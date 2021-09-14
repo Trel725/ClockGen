@@ -18,6 +18,7 @@ uint32_t revbit(uint32_t uData);
 inline uint32_t bytes_to_int(uint8_t * bytes);
 void uart_interrupt_toggle(int flag);
 void tick_timer_toggle(int flag);
+void reset_timers_gpio(void);
 
 
 

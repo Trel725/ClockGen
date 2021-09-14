@@ -9,6 +9,28 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/*
+ * @brief stop all timers, set all gpio to 0
+ */
+void reset_timers_gpio(void){
+	TIM1->CR1 = 0;
+	TIM2->CR1 = 0;
+	TIM3->CR1 = 0;
+	TIM4->CR1 = 0;
+	TIM5->CR1 = 0;
+	TIM8->CR1 = 0;
+	TIM10->CR1 = 0;
+	TIM11->CR1 = 0;
+	TIM12->CR1 = 0;
+	TIM13->CR1 = 0;
+	TIM14->CR1 = 0;
+
+	GPIOA->ODR = 0;
+	GPIOB->ODR = 0;
+	GPIOC->ODR = 0;
+
+}
+
 /**
  * @brief converts 4 bytes to int
  */

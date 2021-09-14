@@ -39,6 +39,7 @@ inline void exec_irq_handler(void) {
 
 void stop_exec_handler(void){
 	tick_timer_toggle(0);
+	reset_timers_gpio();
 	progbuftop = 0;
 	current_us = 0;
 	fsm_state = IDLE;
