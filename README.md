@@ -33,7 +33,7 @@ tim2.on_sync(20_000, 100)
 # and tim5 at 10 kHz
 tim5.on_sync(10_000, 100)
 # start them synchnously
-tim1.start_sync(100)
+tim2.start_sync(100)
 
 # set 4th and 6th pins in GPIOA to high level at 120 us
 gpa.on([4, 6], 120)
@@ -43,8 +43,8 @@ gpa.off(4, 150)
 gpa.off(6, 900)
 
 # finally turn off the timers at 1000 us
-tim1.off_sync(1000)
 tim2.off_sync(1000)
+tim5.off_sync(1000)
 
 # instantiate program generator
 pg = ProgramGen()
