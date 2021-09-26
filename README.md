@@ -35,12 +35,12 @@ tim5.on_sync(10_000, 100)
 # start them synchnously
 tim2.start_sync(100)
 
-# set 4th and 6th pins in GPIOA to high level at 120 us
-gpa.on([4, 6], 120)
+# set 4th and 5th pins in GPIOA to high level at 120 us
+gpa.on([4, 5], 120)
 # then pin 4 to low level at 150 us
 gpa.off(4, 150)
-# and pin 6 at 900 us
-gpa.off(6, 900)
+# and pin 5 at 900 us
+gpa.off(5, 900)
 
 # finally turn off the timers at 1000 us
 tim2.off_sync(1000)
