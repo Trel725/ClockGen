@@ -32,6 +32,12 @@ class ProgramGen(object):
             for name, addr, val in frame['cmds']:
                 print(f"    {name:<20}:{hex(addr)}:{hex(val)}")
 
+    def get_prog_dict(self):
+        return self.opt_frames
+
+    def set_prog_dict(self, frames):
+        self.opt_frames = frames
+
     @staticmethod
     def combine_by_time(frames):
         ''' simple optimization pass that
