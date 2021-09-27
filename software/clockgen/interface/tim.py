@@ -7,6 +7,8 @@ from ..constants import TIM_INIT_DELAY
 from ..utils import get_timer
 from .. import master_timer
 
+import numpy as np
+
 
 class TIM(BaseInterface):
     """A high-level interface for timer.
@@ -29,7 +31,7 @@ class TIM(BaseInterface):
         # whether timer have been started in synced manner
         self.synced = False
 
-    def _prestart(self, arr, time):
+    def _prestart(self, arr, psc, time):
         '''initializes timer, by adding
         initialization commands to program
         at time - TIM_INIT_DELAY '''
@@ -38,6 +40,7 @@ class TIM(BaseInterface):
         self.timer.stop()
         # set its frequency
         self.timer.set_autoreload(arr)
+        self.timer.set_prescaler(psc)
         # set countner value to prevent sudden out pin toggling
         self.timer.set_counter(arr)
         # enable toggle on timer overload, want square wave
@@ -63,6 +66,26 @@ class TIM(BaseInterface):
             raise ValueError(
                 "This timer is not synchronizable! Use normal on/off or another timer")
 
+    def _calculate_arr_prescaler(self, freq, atol=1e-3, rtol=1e-5):
+        '''
+        returns values of prescaler and
+        auto-reload register, correposnding to
+        desired frequency'''
+        # min overflow frequency
+        mof = TIM_FREQ // (2**16 - 1)
+        if freq > mof:
+            arr = (TIM_FREQ // (2 * freq)) - 1
+            psc = 0
+        else:
+            psc = int(np.ceil(mof / freq)) - 1
+            arr = (TIM_FREQ // (2 * freq * (psc + 1))) - 1
+
+        real_freq = (TIM_FREQ / (psc + 1)) / (2 * (arr + 1))
+        if (real_freq - freq) > atol or np.abs((real_freq / freq)) - 1 > rtol:
+            warnings.warn(f"Timer can't tick at exactly desrired frequency! \
+                You will get instead the closest: {real_freq} Hz")
+        return arr, psc
+
     def on(self, freq, time):
         '''
         Start the timer, begin generating square wave at
@@ -72,12 +95,8 @@ class TIM(BaseInterface):
             time - time to start generation (first low->high transition)
         '''
         self._val_time(time)
-        arr = (TIM_FREQ // (2 * freq)) - 1
-        real_freq = TIM_FREQ / (2 * (arr + 1))
-        if real_freq != freq:
-            warnings.warn(f"Timer can't tick at desrired frequency! \
-                You will get instead {real_freq} Hz")
-        self._prestart(arr, time)
+        arr, psc = self._calculate_arr_prescaler(freq)
+        self._prestart(arr, psc, time)
         self.timer.start()
         self.add_frame(time)
 
@@ -93,12 +112,9 @@ class TIM(BaseInterface):
         TODO: is multiple of the frequency safe? ARR preload?
         '''
         self._val_time(time)
-        arr = (TIM_FREQ // (2 * freq)) - 1
-        real_freq = TIM_FREQ / (2 * (arr + 1))
-        if real_freq != freq:
-            warnings.warn(f"Timer can't tick at desrired frequency! \
-                You will get instead {real_freq} Hz")
+        arr, psc = self._calculate_arr_prescaler(freq)
         self.timer.set_autoreload(arr)
+        self.timer.set_prescaler(psc)
         self.add_frame(time)
 
     def on_sync(self, freq, time):
@@ -121,11 +137,8 @@ class TIM(BaseInterface):
         self._val_sync()
         self.synced = True
         self._val_time(time)
-        arr = (TIM_FREQ // (2 * freq)) - 1
-        real_freq = TIM_FREQ / (2 * (arr + 1))
-        if real_freq != freq:
-            warnings.warn(f"Timer can't tick at desrired frequency! \
-                You will get instead {real_freq} Hz")
+        arr, psc = self._calculate_arr_prescaler(freq)
+        self._prestart(arr, psc, time)
         self._prestart(arr, time)
 
     def start_sync(self, time):
@@ -144,7 +157,7 @@ class TIM(BaseInterface):
 
     def off(self, time):
         ''' stop the running timer
-        
+
         args:
             time - time at which timer will stop
         '''
@@ -158,7 +171,7 @@ class TIM(BaseInterface):
 
     def off_sync(self, time):
         ''' stop the running timer, that have been turned on synchronously.
-        
+
         args:
             time - time at which timer will stop
         '''

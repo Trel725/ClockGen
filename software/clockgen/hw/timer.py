@@ -50,6 +50,12 @@ class Timer(Periph):
         except KeyError:
             raise ValueError(f"Timer does not have this channel: {channel}")
 
+    def set_prescaler(self, value):
+        '''timer prescaler, i.e. frequency division coefficient
+        NOTE: frequency will be divided by value+1, e.g. by 5 for value=4
+        '''
+        self.PSC.value = value
+
     def set_autoreload(self, value):
         '''
         value at which counter will
