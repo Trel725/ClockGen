@@ -55,6 +55,7 @@ class Timer(Periph):
         NOTE: frequency will be divided by value+1, e.g. by 5 for value=4
         '''
         self.PSC.value = value
+        self.PSC._prev_value = -1
 
     def set_autoreload(self, value):
         '''
@@ -62,6 +63,7 @@ class Timer(Periph):
         automaticlly reload and generate GPIO toggle
         TIM->ARR'''
         self.ARR.value = value
+        self.ARR._prev_value = -1
 
     def set_counter(self, value, force=True):
         '''

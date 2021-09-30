@@ -139,7 +139,6 @@ class TIM(BaseInterface):
         self._val_time(time)
         arr, psc = self._calculate_arr_prescaler(freq)
         self._prestart(arr, psc, time)
-        self._prestart(arr, time)
 
     def start_sync(self, time):
         ''' Starts all the initialized timers at specified time

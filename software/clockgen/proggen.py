@@ -1,6 +1,6 @@
 import copy
 
-from .constants import EOF, EOP
+from .constants import EOF, EOP, MIN_START_TIME
 
 
 class ProgramGen(object):
@@ -55,10 +55,20 @@ class ProgramGen(object):
             out_frames.append(fr)
         return out_frames
 
+    @staticmethod
+    def normalize_time(frames):
+        min_time = min([fr['time'] for fr in frames])
+        for fr in frames:
+            fr['time'] -= min_time
+            fr['time'] += MIN_START_TIME
+        return frames
+
     def optimize(self, frames):
         ''' performs program optimization '''
         frames = sorted(frames, key=lambda x: x['time'])
-        return self.combine_by_time(frames)
+        frames = self.combine_by_time(frames)
+        frames = self.normalize_time(frames)
+        return frames
 
     def generate_program(self, hw_list):
         ''' Generate complete binary program from list of hardware

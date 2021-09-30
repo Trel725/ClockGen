@@ -76,6 +76,7 @@ def start_execution(ser):
     by sending START_EXECUTION byte to microcontroller
     '''
     ser.write(SERIAL_EXECUTE)
+    #return ser.read_until()
 
 
 def send_program(ser, prog):
