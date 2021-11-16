@@ -25,7 +25,11 @@ EOF = 0xABBCCDDE
 # end of programm
 EOP = 0xFFFFFFFF
 
+# max possible time:
+CLOCKGEN_MAX_TIME = EOP - 2 * TIM_INIT_DELAY
+
 # constants for sending program
 SERIAL_START = b'\x11'
 SERIAL_END = b'\xa0'
 SERIAL_EXECUTE = b'\xc6'
+SERIAL_STOP_EXECUTION = b'\x8c'

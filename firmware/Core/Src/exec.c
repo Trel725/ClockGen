@@ -9,7 +9,7 @@
 
 void start_execution(void){
 	uart_printf("Starting program execution...");
-	uart_interrupt_toggle(0);
+	//uart_interrupt_toggle(0);
 	progbuftop=0;
 	tick_timer_toggle(1);
 }
@@ -43,5 +43,5 @@ void stop_exec_handler(void){
 	progbuftop = 0;
 	current_us = 0;
 	fsm_state = IDLE;
-	uart_interrupt_toggle(1);
+	//uart_interrupt_toggle(1);
 }

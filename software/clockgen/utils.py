@@ -3,14 +3,14 @@ import warnings
 from . import pin_mapping, hw_desc
 from . import Timer
 from .hw import GPIO
-from .constants import (SERIAL_START, SERIAL_END,
+from .constants import (SERIAL_START, SERIAL_END, SERIAL_STOP_EXECUTION,
                         SERIAL_EXECUTE, MASTER_TIMER, GPIO_LIST)
 
 
 def get_timer(tim_id):
     ''' instantiate and returns instance of the timer, specified
     by tim_id
-    
+
     args:
         tim_id: string describing timer to use:
         - "TIM1" or "tim1" to specify first TIM1
@@ -55,7 +55,7 @@ def get_timer(tim_id):
 def get_gpio(gpio_id):
     ''' instantiate and returns instance of GPIO, specified
     by gpio_id
-    
+
     args:
         gpio_id: string describing GPIO to use:
         - "GPIOA" to specify GPIOA.
@@ -76,7 +76,11 @@ def start_execution(ser):
     by sending START_EXECUTION byte to microcontroller
     '''
     ser.write(SERIAL_EXECUTE)
-    #return ser.read_until()
+    # return ser.read_until()
+
+
+def stop_execution(ser):
+    ser.write(SERIAL_STOP_EXECUTION)
 
 
 def send_program(ser, prog):

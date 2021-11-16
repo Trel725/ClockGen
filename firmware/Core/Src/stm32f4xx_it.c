@@ -220,6 +220,11 @@ void USART2_IRQHandler(void)
 				start_execution();
 				fsm_state = PROGRAM_EXECUTING;
 			}
+			break;
+		case STOP_EXEC_BYTE:
+			if (fsm_state == PROGRAM_EXECUTING){
+				stop_exec_handler();
+			}
 		}
 
 		uartrecbufftop++;
